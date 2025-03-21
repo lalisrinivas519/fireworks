@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+        }
+
+
+
+        .wave {
+            font-size: 60px;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            width: 100%;
+            font-size: 52px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .wave span {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            text-transform: uppercase;
+            animation: wave 1s infinite;
+            animation-delay: calc(.1s * var(--i));
+
+        }
+
+        @keyframes wave {
+
+            0%,
+            40%,
+            100% {
+                transform: translateY(0)
+            }
+
+            20% {
+                transform: translateY(-20px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wave">
+<span style="--i:1">H</span>
+<span style="--i:2">A</span>
+<span style="--i:3">P</span>
+<span style="--i:4">P</span>
+<span style="--i:5">Y</span>
+<span style="--i:6">N</span>
+<span style="--i:7">E</span>
+<span style="--i:8">W</span>
+<span style="--i:9">Y</span>
+<span style="--i:10">E</span>
+<span style="--i:11">A</span>
+<span style="--i:12">R</span>
+</div>
+
+<section></section>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="jquery.fireworks.js"></script>
+<script>
+$('section').fireworks(
+{
+sound:true,
+opacity:90,
+width:'100%',
+height:'100%'
+}
+)
+</script>
+</body>
+</html>
